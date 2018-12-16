@@ -1,10 +1,17 @@
 package com.bjut.thread;
 /*
 *  在静态方法上加上synchronzied关键字，表示锁定.class类，类一级别的锁（独占.class类）
-* */
+*  static synchronzied 两个线程有先后的顺序
+ *  */
 public class MultiThread {
     private static int num = 0;
-    /* static*/
+    /* 当没有static修饰时，不是类级别的锁，两个类运行时会乱序
+    * 总结： 关键字synchronized取得的锁都是对象锁，而不是把一段代码（方法）当作锁
+    *       所以示例代码中那个线程先执行synchronized关键字的方法，那个线程就持有该
+    *       方法所属对象的锁（Lock），两个对象，线程获得的就是不同的锁，他们互不影响。
+    *           有一种情况则是相同的锁，即在静态方法上加synchronized关键字，表示锁
+    *           定.class类，类一级别的锁（独占.class类）
+    * */
     public static synchronized void printNum(String tag){
         try {
             if (tag.equals("a")) {
