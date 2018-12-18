@@ -1,4 +1,4 @@
-package com.bjut;
+package com.bjut.TestSwitch;
 /*
 *  switch(expr) expr只能是一个枚举常量（内部也是由整形或字符类型实现）或一个整数表达式
 *   long，float，double，String类型不能隐式的转换成int类型
