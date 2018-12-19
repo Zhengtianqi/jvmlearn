@@ -8,7 +8,7 @@ package com.bjut.StringTest;
 *   StringBuilder在单线程时效率更高，但是不是线程安全的。（StringBuffer是线程安全的）
 *   so: 多线程大量数据，优先考虑StringBuffer
 * */
-public class Test {
+public class StringAndStringBufferTest {
     public static void testString(){
         String s = "Hello";
         String s1 = "world";
