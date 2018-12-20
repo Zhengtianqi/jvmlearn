@@ -7,6 +7,7 @@ package com.bjut.ExceptionTest;
 *   在java API中，已经定义了许多异常类，这些异常类分为Error（错误）和Exception（异常）两大类
 *   Error，Exception，RuntimeException都是Throwable的子类，throw可以抛出这些异常
 *
+*   其中Error引起程序终止（例如： OutOfMemoryError，ThreadDeath）
 * */
 public class ExceptionTest04 {
     public static void testFianlly() {
