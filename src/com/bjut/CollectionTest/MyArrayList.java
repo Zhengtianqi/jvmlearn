@@ -1,6 +1,7 @@
 package com.bjut.CollectionTest;
 /*
 * 手写ArrayList
+* Collection<--List<--ArrayList
 * */
 public class MyArrayList {
     private Object[] value = null;
