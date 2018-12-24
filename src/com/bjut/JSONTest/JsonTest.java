@@ -17,7 +17,7 @@ public class JsonTest {
 
         V_ZGBX_SBGRJBXXa v_zgbx_sbgrjbxx = JSON.parseObject(result,V_ZGBX_SBGRJBXXa.class);
 
-        System.out.println(v_zgbx_sbgrjbxx.getBAE039());
-        System.out.println(v_zgbx_sbgrjbxx.getAAC999());
+        System.out.println("BAE039:"+v_zgbx_sbgrjbxx.getBAE039());
+        System.out.println("AAC999:"+v_zgbx_sbgrjbxx.getAAC999());
     }
 }

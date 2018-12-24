@@ -115,7 +115,7 @@ public class JsonListTest {
                 "\t}]\n" +
                 "}";
 
-        // System.out.println(json);
+         System.out.println(json);
 
         /* 找出指定的2个字符在 该字符串里面的位置 */
         int strStartIndex = json.indexOf("[");
