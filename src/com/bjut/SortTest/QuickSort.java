@@ -1,7 +1,9 @@
 package com.bjut.SortTest;
 
 import java.util.Arrays;
-
+/*
+*   快排
+* */
 public class QuickSort {
     public static void main(String[] args) {
         int[] a = {1, 2, 4, 5, 7, 4, 5 ,3 ,9 ,0};
@@ -9,7 +11,9 @@ public class QuickSort {
         quickSort(a);
         System.out.println(Arrays.toString(a));
     }
-
+    /*
+    *   利用函数重载
+    * */
     public static void quickSort(int[] a) {
         if(a.length>0) {
             quickSort(a, 0 , a.length-1);
