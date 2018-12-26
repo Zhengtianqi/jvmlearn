@@ -3,6 +3,8 @@ package com.bjut.SortTest;
 import java.util.Arrays;
 /*
 *   快排
+*   快速排序的最差时间复杂度和冒泡排序是一样的都是O(N2)
+*   快速排序的平均时间复杂度为O(NlogN)
 * */
 public class QuickSort {
     public static void main(String[] args) {
