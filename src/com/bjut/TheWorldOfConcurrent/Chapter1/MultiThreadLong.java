@@ -25,7 +25,7 @@ package com.bjut.TheWorldOfConcurrent.Chapter1;
  * 解决方法 ： 可以使用volatile修饰，告诉编译器，long数据要格外小心
  */
 public class MultiThreadLong {
-    public static long t = 0;
+    public static long t = 0; // 解决方法 public volatile static long t = 0;
     public static class ChangeT implements Runnable{
         private long to;
         public ChangeT(long to){
