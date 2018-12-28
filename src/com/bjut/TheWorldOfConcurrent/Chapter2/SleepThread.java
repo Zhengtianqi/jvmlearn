@@ -23,5 +23,8 @@ public class SleepThread {
                 Thread.yield();
             }
         });
+        t1.start();
+        Thread.sleep(2000);
+        t1.interrupt();
     }
 }
