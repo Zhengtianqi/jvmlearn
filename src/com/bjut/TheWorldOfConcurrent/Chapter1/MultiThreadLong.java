@@ -23,6 +23,7 @@ package com.bjut.TheWorldOfConcurrent.Chapter1;
  * 前边是-999或者-444的前32位，后边是+111的后32位，导致结果出错
  *
  * 解决方法 ： 可以使用volatile修饰，告诉编译器，long数据要格外小心
+ * valatile保证数据的原子性，但是不能保证i++的原子性操作（第二章的VolatileTask）
  */
 public class MultiThreadLong {
     public static long t = 0; // 解决方法 public volatile static long t = 0;
