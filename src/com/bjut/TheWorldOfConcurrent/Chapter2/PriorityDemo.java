@@ -1,5 +1,7 @@
 package com.bjut.TheWorldOfConcurrent.Chapter2;
-
+/**
+ * 线程优先级
+* */
 public class PriorityDemo {
     public static class HightPriority extends Thread{
         static int count = 0;
