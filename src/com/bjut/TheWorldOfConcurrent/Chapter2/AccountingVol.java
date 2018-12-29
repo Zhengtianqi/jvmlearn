@@ -1,9 +1,11 @@
 package com.bjut.TheWorldOfConcurrent.Chapter2;
 /**
-*   两个线程同时对i进行累加，各执行10000000次，预计累加到20000000
-*   但是实际并没有，因为两个线程同时对其写入时，其中一个线程的结果会覆盖另一个（虽然i被声明为volatile变量）
+ *   两个线程同时对i进行累加，各执行10000000次，预计累加到20000000
+ *   但是实际并没有，因为两个线程同时对其写入时，其中一个线程的结果会覆盖另一个（虽然i被声明为volatile变量）
  *
-* */
+ *    解决方案：
+ *      AccountingSync AccountingSync2
+ * */
 public class AccountingVol implements Runnable {
     static AccountingVol instance = new AccountingVol();
     static volatile int i = 0;
