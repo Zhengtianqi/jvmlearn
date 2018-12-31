@@ -6,7 +6,7 @@
     MultiThreadLong 原子性概念理解</br>
 #Chapter2:
     NoVisibility：volatile声明变量</br>
-    VolatileTask：valatile深入</br>
+    VolatileTask：volatile深入</br>
     PriorityDemo：线程优先级</br>
     BadSuspend：suspend挂起线程</br>
     DaemonDemo：守护线程</br>
