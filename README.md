@@ -20,5 +20,10 @@
     AccountingSyncBad：synchonized的错误使用</br>
     AccountingVol：同步会出现的问题</br>
     ArrayListMultiThread：并发下的ArrayList</br>
+#Chapter3：
+    ReenterLock：重入锁
+    ReentrantLockCondition：重入锁Condition
+    FairLock：公平锁
+    IntLock：死锁
 
    
