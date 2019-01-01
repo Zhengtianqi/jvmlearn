@@ -7,6 +7,13 @@ import java.util.concurrent.locks.ReentrantLock;
  *    在Condition.await()调用后，这个线程会释放这把锁。
  *    同理：
  *    在Condition.signal()方法调用时，也要求线程先获得相关的锁。
+ *
+ *
+ *    await()方法会使当前线程等待，同时释放当前锁，当其他线程中使用signal()或者signalAll方法时，
+ *    线程会重新获得锁并继续执行，或者当线程被中断，也能跳出等待
+ *
+ *    awaitUninterruptibly()方法与await()方法基本相同，但是它并不会在等待过程中响应中断。
+ *    single()方法用于唤醒一个在等待的进程。相对的singalAll()方法会唤醒所有在等待中的线程，这和Object.notify()方法很相似。
 * */
 public class ReentrantLockCondition implements Runnable {
     public static ReentrantLock lock = new ReentrantLock();
@@ -30,7 +37,7 @@ public class ReentrantLockCondition implements Runnable {
         t1.start(); // 通知线程t1继续执行
         Thread.sleep(2000);
         lock.lock(); // 表示Lock对象执行了锁定操作，其他的线程都必须等这个线程完成，并释放锁之后，才能执行被锁住的代码块
-        condition.signal(); // 由主线程main发出通知，告知等待在Condition上的线程可以继续执行了
+        condition.signal(); // 由主线程main发出通知，告知等待在Condition上的线程可以继续执行了,所以打印了24行的Thread is going on
         lock.unlock();
     }
 }
