@@ -1,16 +1,18 @@
 package com.bjut.TheWorldOfConcurrent.Chapter2;
+
 /**
  * 线程优先级
-* */
+ */
 public class PriorityDemo {
-    public static class HightPriority extends Thread{
+    public static class HightPriority extends Thread {
         static int count = 0;
+
         @Override
         public void run() {
-            while(true){
-                synchronized(PriorityDemo.class){
+            while (true) {
+                synchronized (PriorityDemo.class) {
                     count++;
-                    if(count > 10000000){
+                    if (count > 10000000) {
                         System.out.println("HightPriority is complete");
                         break;
                     }
@@ -18,14 +20,16 @@ public class PriorityDemo {
             }
         }
     }
-    public static class LowPriority extends Thread{
+
+    public static class LowPriority extends Thread {
         static int count = 0;
+
         @Override
         public void run() {
-            while(true){
-                synchronized(PriorityDemo.class){
+            while (true) {
+                synchronized (PriorityDemo.class) {
                     count++;
-                    if(count > 10000000){
+                    if (count > 10000000) {
                         System.out.println("LowPriority is complete");
                         break;
                     }
@@ -33,7 +37,8 @@ public class PriorityDemo {
             }
         }
     }
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         Thread high = new HightPriority();
         LowPriority low = new LowPriority();
 

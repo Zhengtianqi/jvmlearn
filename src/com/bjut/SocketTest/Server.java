@@ -8,11 +8,11 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class Server {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         BufferedReader br = null;
         PrintWriter pw = null;
         try {
-            ServerSocket server =new ServerSocket(17000);
+            ServerSocket server = new ServerSocket(17000);
             Socket socket = server.accept();
 
             // 获取输入流
@@ -28,7 +28,7 @@ public class Server {
 
         } catch (Exception e) {
             e.printStackTrace();
-        }finally{
+        } finally {
             try {
                 br.close();
                 pw.close();

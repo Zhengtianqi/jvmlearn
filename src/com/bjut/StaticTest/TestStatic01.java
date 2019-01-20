@@ -3,7 +3,8 @@ package com.bjut.StaticTest;
 public class TestStatic01 {
     public static int staticInt = 0;
     public int nonStaticInt = 0;
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         TestStatic01 t = new TestStatic01();
         System.out.println("t.staticInt = " + t.staticInt);
         System.out.println("TestStatic01.staticInt = " + TestStatic01.staticInt);

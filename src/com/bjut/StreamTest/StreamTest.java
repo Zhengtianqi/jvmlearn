@@ -11,28 +11,30 @@ import java.io.*;
  *   在设计中，可以通过抽象修饰者类（FilterInputStream），通过调用InputStream类或者子类提供的一些方法再加上逻辑判断
  *
  * */
-class MyOwnInputStream extends FilterInputStream{
+class MyOwnInputStream extends FilterInputStream {
     public MyOwnInputStream(InputStream in) {
         super(in);
     }
-    public int read() throws IOException{
+
+    public int read() throws IOException {
         int c = 0;
-        if((c=super.read()) != -1){
+        if ((c = super.read()) != -1) {
             // 把小写转换成大写
-            if(Character.isLowerCase((char)c))
-                return Character.toUpperCase((char)c);
-            else if(Character.isUpperCase((char)c))
-                return Character.toLowerCase((char)c);
+            if (Character.isLowerCase((char) c))
+                return Character.toUpperCase((char) c);
+            else if (Character.isUpperCase((char) c))
+                return Character.toLowerCase((char) c);
                 // 如果不是字母，保持不变
             else
                 return c;
-        }else{
+        } else {
             return -1;
         }
     }
 }
+
 public class StreamTest {
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         int c;
         InputStream is;
@@ -40,8 +42,8 @@ public class StreamTest {
         {
             try {
                 is = new MyOwnInputStream(new BufferedInputStream(new FileInputStream("src/com/bjut/StreamTest/test.txt")));
-                while((c = is.read()) >= 0){
-                    System.out.print((char)c);
+                while ((c = is.read()) >= 0) {
+                    System.out.print((char) c);
                 }
             } catch (FileNotFoundException e) {
                 e.printStackTrace();

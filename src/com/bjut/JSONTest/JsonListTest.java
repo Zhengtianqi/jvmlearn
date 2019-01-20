@@ -115,7 +115,7 @@ public class JsonListTest {
                 "\t}]\n" +
                 "}";
 
-         System.out.println(json);
+        System.out.println(json);
 
         /* 找出指定的2个字符在 该字符串里面的位置 */
         int strStartIndex = json.indexOf("[");
@@ -126,9 +126,9 @@ public class JsonListTest {
         // System.out.println(result);
 
         V_ZGBX_SBGRJFXX v_zgbx_sbgrjbxx;
-        List<V_ZGBX_SBGRJFXX> lis = JSONArray.parseArray(result,V_ZGBX_SBGRJFXX.class);
+        List<V_ZGBX_SBGRJFXX> lis = JSONArray.parseArray(result, V_ZGBX_SBGRJFXX.class);
 
-        for(V_ZGBX_SBGRJFXX l : lis){
+        for (V_ZGBX_SBGRJFXX l : lis) {
             System.out.println(l.getAAA027());
         }
     }

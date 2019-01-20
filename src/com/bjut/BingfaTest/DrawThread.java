@@ -1,11 +1,12 @@
 package com.bjut.BingfaTest;
 
-public class DrawThread extends Thread{
+public class DrawThread extends Thread {
     // 模拟用户账户
     private Account account;
     // 当前取钱线程所希望取的钱数
     private double drawAmount;
-    public DrawThread(String name, Account account, double drawAmount){
+
+    public DrawThread(String name, Account account, double drawAmount) {
         super(name);
         this.account = account;
         this.drawAmount = drawAmount;
@@ -15,7 +16,7 @@ public class DrawThread extends Thread{
     @Override
     public void run() {
         // 账户余额大于取钱数目
-        if(account.getBalance() >= drawAmount) {
+        if (account.getBalance() >= drawAmount) {
             // 吐出钞票
             System.out.println(getName() + "取钱成功！吐出钞票：" + drawAmount);
             try {
@@ -28,7 +29,7 @@ public class DrawThread extends Thread{
              * */
             account.setBalance(account.getBalance() - drawAmount);
             System.out.println("\t 余额为：" + account.getBalance());
-        }else{
+        } else {
             System.out.println(getName() + "取钱失败！ 余额不足");
         }
     }

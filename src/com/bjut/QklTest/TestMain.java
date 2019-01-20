@@ -1,6 +1,7 @@
 package com.bjut.QklTest;
 
 import com.alibaba.fastjson.JSONObject;
+
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -34,15 +35,15 @@ public class TestMain {
         System.out.println("\nBlockchain is Valid: " + isChainValid());
 
         JSONObject obj = new JSONObject();
-        for(Block b : blockchain){
-            obj.put("Block",blockchain);
+        for (Block b : blockchain) {
+            obj.put("Block", blockchain);
         }
         System.out.println(obj);
     }
 
     /*
-    * 验证创建的区块链。任何块的改变将会导致这个方法失效。
-    */
+     * 验证创建的区块链。任何块的改变将会导致这个方法失效。
+     */
     public static Boolean isChainValid() {
         Block currentBlock;
         Block previousBlock;

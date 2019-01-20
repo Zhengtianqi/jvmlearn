@@ -4,26 +4,31 @@ public class Account {
     // 封装账户编号，账户余额的两个成员变量
     private String accountNo;
     private double balance;
-    public Account(){}
+
+    public Account() {
+    }
+
     // 构造器
-    public Account(String accountNo, double balance){
+    public Account(String accountNo, double balance) {
         this.accountNo = accountNo;
         this.balance = balance;
     }
 
-    public int hashCode(){
+    public int hashCode() {
         return accountNo.hashCode();
     }
-    public boolean equals(Object obj){
-        if(this == obj)
+
+    public boolean equals(Object obj) {
+        if (this == obj)
             return true;
 
-        if(obj != null && obj.getClass() == Account.class){
-            Account target = (Account)obj;
+        if (obj != null && obj.getClass() == Account.class) {
+            Account target = (Account) obj;
             return target.getAccountNo().equals(accountNo);
         }
         return false;
     }
+
     /*
      *  getter
      *  setter

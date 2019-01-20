@@ -1,11 +1,12 @@
 package com.bjut.TheWorldOfConcurrent.Chapter2;
+
 /**
-*
  *
-*
-* */
+ *
+ *
+ * */
 public class ThreadGroupName implements Runnable {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         ThreadGroup tg = new ThreadGroup("PrintGroup"); // 建立一个名为PrintGroup的线程组
         Thread t1 = new Thread(tg, new ThreadGroupName(), "T1");
         Thread t2 = new Thread(tg, new ThreadGroupName(), "T2"); // 将T1 T2两个线程加入这个数组中
@@ -19,7 +20,7 @@ public class ThreadGroupName implements Runnable {
     public void run() {
         String groupAndName = Thread.currentThread().getThreadGroup().getName()
                 + "-" + Thread.currentThread().getName();
-        while (true){
+        while (true) {
             System.out.println("I am " + groupAndName);
             try {
                 Thread.sleep(3000);

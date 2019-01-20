@@ -1,8 +1,9 @@
 package com.bjut.JSONTest;
+
 /*
-*
-*   json -> entity
-* */
+ *
+ *   json -> entity
+ * */
 public class V_ZGBX_SBGRJBXXa {
     private String BAE039;
     private String AAC999;

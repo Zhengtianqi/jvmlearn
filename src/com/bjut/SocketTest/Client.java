@@ -7,7 +7,7 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 public class Client {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         BufferedReader br = null;
         PrintWriter pw = null;
         try {
@@ -22,16 +22,16 @@ public class Client {
             pw.println("Hello");
 
             String s = null;
-            while(true){
+            while (true) {
                 s = br.readLine();
                 System.out.println(s);
-                if(s != null){
+                if (s != null) {
                     break;
                 }
             }
         } catch (IOException e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             try {
                 br.close();
                 pw.close();

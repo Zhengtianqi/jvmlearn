@@ -1,9 +1,10 @@
 package com.bjut.QklTest;
 
 import java.security.MessageDigest;
+
 /*
-* 生成签名的方法
-* */
+ * 生成签名的方法
+ * */
 public class StringUtil {
     public static String applySha256(String input) {
         try {
