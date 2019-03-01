@@ -53,5 +53,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" exported="" scope="PROVIDED" name="Tomcat 9.0.10" level="application_server_libraries" />
+    <orderEntry type="library" name="guava-27.0.1-jre" level="project" />
   </component>
 </module>
