@@ -25,5 +25,7 @@
     ReentrantLockCondition：重入锁Condition
     FairLock：公平锁
     IntLock：死锁
-
-   
+#Chapter4：
+    ScheduledExecutorServiceDemo 线程定时器
+    ThreadPoolDemo newFixedThreadPool()为例，简单的展示线程池的使用
+    RejectThreadPoolDemo 自定义线程和拒绝策略
